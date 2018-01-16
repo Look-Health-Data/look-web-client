@@ -1,0 +1,13 @@
+.DS_Store
+.idea/
+_dev/
+public/_ignored/
+public/static/_ignored/
+public/static/css/_ignored/
+public/static/js/_ignored/
+public/static/media/_ignored/
+build/_ignored/
+build/static/_ignored/
+build/static/css/_ignored/
+build/static/js/_ignored/
+build/static/media/_ignored/
