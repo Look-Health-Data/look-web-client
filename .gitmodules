@@ -1,0 +1,4 @@
+[submodule "look-public"]
+	path = public
+	url = https://github.com/Look-Health-Data/look-public
+	branch = master
