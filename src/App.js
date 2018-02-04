@@ -1,7 +1,9 @@
 // Imports.Core
 import React, { Component } from 'react';
+import Helmet from 'react-helmet';
+
 // import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 
 // Imports.Components
 // import { Button } from '@progress/kendo-react-buttons';
@@ -25,9 +27,16 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+    <div>
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>Health Hub: Home</title>
+            {/*<link rel="canonical" href="http://mysite.com/example" />*/}
+        </Helmet>
+        <div>
 
-      </div>
+        </div>
+    </div>
     );
   }
 }

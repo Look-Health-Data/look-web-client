@@ -2845,9 +2845,10 @@ body {
   position: fixed;
   right: 0;
   top: 0;
-  visibility: hidden;
+  /* visibility: hidden; */
   width: 20rem;
-  z-index: 10002; }
+  z-index: 10002;
+  }
   #menu input, #menu select, #menu textarea {
     color: #ffffff; }
   #menu a {

@@ -1,42 +1,64 @@
 // - Imports
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Helmet from 'react-helmet';
+// import Script from 'react-load-script';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
-import './index.css';
 import App from './App';
 import { default as PublicSite} from './site/PublicSite';
+// import './index.css';
 // import registerServiceWorker from './registerServiceWorker';
 
 // - Authentication
 let loggedIn = false;
 
 // - Routes
-const BasicExample = () => (
-  <Router>
+const Client = () => (
     <div>
-      {/*<ul>*/}
-        {/*<li><Link to="/">Home</Link></li>*/}
-        {/*<li><Link to="/about">About</Link></li>*/}
-        {/*<li><Link to="/topics">Topics</Link></li>*/}
-      {/*</ul>*/}
-      {/*<hr/>*/}
-        {/*  TODO: Instead, reroute to /app if logged in. */}
-        {
-          loggedIn
-            ? <Route exact path="/" component={App}/>
-            : <Route exact path="/" component={PublicSite}/>
-        }
-      <Route exact path="/app" component={App}/>
-      <Route path="/site" component={PublicSite}/>
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>~ Health Hub ~</title>
+            {/*<link rel="canonical" href="http://mysite.com/example" />*/}
+        </Helmet>
+        <Router>
+              <div>
+
+              {/*<ul>*/}
+                {/*<li><Link to="/">Home</Link></li>*/}
+                {/*<li><Link to="/about">About</Link></li>*/}
+                {/*<li><Link to="/topics">Topics</Link></li>*/}
+              {/*</ul>*/}
+              {/*<hr/>*/}
+                {/*  TODO: Instead, reroute to /app if logged in. */}
+                {/*{*/}
+                  {/*loggedIn*/}
+                    {/*? <Route exact path="/" component={App}/>*/}
+                    {/*: <Route exact path="/" component={PublicSite}/>*/}
+                {/*}*/}
+              {/*<Route path={!loggedIn ? '/app' : '/app'} component={App}/>*/}
+              <Route exact path='/' component={loggedIn ? App : PublicSite}/>
+
+              <Route path='/app' component={App}/>
+              <Route path='/site' component={PublicSite}/>
+                  </div>
+
+                {/*<Route path={loggedIn ? '/site' : '/(|site)'} component={PublicSite}/>*/}
+        </Router>
+        {/*<Script url=''/>*/}
+		{/*<Script url="static/js/jquery.min.js"/>*/}
+		{/*<Script url="static/js/browser.min.js"/>*/}
+		{/*<Script url="static/js/breakpoints.min.js"/>*/}
+		{/*<Script url="static/js/util.js"/>*/}
+		{/*<Script url="static/js/main.js"/>*/}
     </div>
-  </Router>
+
+
+
 );
-// export default BasicExample
 
 // - Render
-ReactDOM.render(<BasicExample />, document.getElementById('root'));
-// ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Client />, document.getElementById('root'));
 
 // - Service Workers
 // lregisterServiceWorker();  // Enable on first, MVP deployment.
