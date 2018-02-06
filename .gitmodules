@@ -1,3 +1,6 @@
 [submodule "src/site"]
 	path = src/site
 	url = https://github.com/Look-Health-Data/site.git
+[submodule "src/app"]
+	path = src/app
+	url = https://github.com/the-health-hub/health-hub.web.app.git
