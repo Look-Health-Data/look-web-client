@@ -1,5 +1,6 @@
 .idea/
 _dev/
 _ignored/
+node_modules/
 .DS_Store
 todo.txt
