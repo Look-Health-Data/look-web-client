@@ -8,7 +8,7 @@ import store from './app/src/store';
 import SiteHome from './site/src/Site';
 import AppHome from './app/src/Home';
 import NotFound404 from './app/src/views/NotFound404'
-import { GS1 as GS1, GS2, GS3, GS4,
+import { GS1, GS2, GS3, GS4,
   GettingStartedPersonType, GettingStartedWhoFor, GettingStartedTest }
   from './app/src/GettingStarted'
 import 'bootstrap/dist/css/bootstrap.css';
