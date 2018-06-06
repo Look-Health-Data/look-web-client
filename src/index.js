@@ -15,9 +15,9 @@ import './index.css'
 import {
   GettingStartedPersonType, GettingStartedTest, GettingStartedWhoFor
 } from "./app/src/views/GettingStarted/_ignored/GettingStartedIgnored";
-import GS1 from "./app/src/views/GettingStarted/pages/1";
-import GS2 from "./app/src/views/GettingStarted/pages/2";
-import GS3 from "./app/src/views/GettingStarted/pages/3";
+import GS1 from "./app/src/views/GettingStarted/pages/Gs1Intro";
+import GS2 from "./app/src/views/GettingStarted/pages/Gs2Social";
+import GS3 from "./app/src/views/GettingStarted/pages/Gs3Domains";
 import GS4 from "./app/src/views/GettingStarted/pages/4";
 import GS5 from './app/src/views/GettingStarted/pages/5';
 // import registerServiceWorker from './registerServiceWorker';
@@ -25,6 +25,7 @@ import GS5 from './app/src/views/GettingStarted/pages/5';
 let loggedIn = false;
 // noinspection UnnecessaryLocalVariableJS
 let loadSite = loggedIn;
+
 
 // - App
 ReactDOM.render(
